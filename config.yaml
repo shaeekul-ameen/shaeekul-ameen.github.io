@@ -127,7 +127,7 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Shaeekul Ameen"
-    subtitle: "Zealous Researcher, Lecturer"
+    subtitle: "Researcher, Lecturer"
     content: "An ardent electrical graduate, at present serving as a lecturer at multiple academic organizations"
     image: /shaeekul.png
     bottomImage:
