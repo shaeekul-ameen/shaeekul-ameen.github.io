@@ -127,27 +127,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .hero-visual { position: relative; display: flex; justify-content: center; }
 .portrait-frame {
-  position: relative; width: min(100%, 430px); aspect-ratio: .82;
-  border-radius: 36px; padding: 14px; background: var(--surface);
+  position: relative; width: min(100%, 420px); aspect-ratio: 1;
+  border-radius: 50%; padding: 14px; background: linear-gradient(145deg, color-mix(in srgb, var(--surface) 90%, #ffffff 10%), color-mix(in srgb, var(--surface-2) 72%, transparent));
   box-shadow: var(--shadow); border: 1px solid var(--line);
 }
-.portrait-frame::before { content: ""; position: absolute; inset: -16px 38px 42px -20px; border: 1px solid color-mix(in srgb, var(--blue) 28%, transparent); border-radius: 42px; z-index: -1; }
-.portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 26%; border-radius: 25px; }
-.portrait-grid { position: absolute; inset: 0; border-radius: 36px; background-image: linear-gradient(rgba(18,103,233,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(18,103,233,.05) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; }
-.portrait-card { position: absolute; display: flex; gap: 10px; align-items: center; border: 1px solid color-mix(in srgb, var(--line) 85%, transparent); background: color-mix(in srgb, var(--surface) 90%, transparent); backdrop-filter: blur(14px); box-shadow: 0 14px 34px rgba(10,31,59,.14); border-radius: 16px; }
-.portrait-card-top { left: -44px; top: 38px; padding: 12px 14px; }
-.portrait-card-top strong, .portrait-card-top small { display: block; }
-.portrait-card-top strong { font-size: .85rem; }
-.portrait-card-top small { color: var(--muted); font-size: .73rem; margin-top: 1px; }
-.status-dot { width: 9px; height: 9px; border-radius: 50%; background: #1ab77a; box-shadow: 0 0 0 5px rgba(26,183,122,.12); }
-.portrait-card-bottom { right: -34px; bottom: 36px; flex-direction: column; align-items: flex-start; gap: 3px; padding: 13px 16px; max-width: 260px; }
-.portrait-card-bottom strong { font-size: .83rem; line-height: 1.4; }
-.mini-label { color: var(--blue); font-weight: 800; font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; }
+.portrait-frame::before { content: ""; position: absolute; inset: -16px; border: 1px solid color-mix(in srgb, var(--blue) 28%, transparent); border-radius: 50%; z-index: -1; }
+.portrait-frame::after { content: ""; position: absolute; inset: 24px; border: 1px solid color-mix(in srgb, var(--blue) 18%, transparent); border-radius: 50%; pointer-events: none; }
+.portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; border-radius: 50%; }
+.portrait-grid, .portrait-card, .portrait-card-top, .portrait-card-bottom, .status-dot, .mini-label { display: none; }
 .metrics { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 88px; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; z-index: 2; }
 .metric { padding: 7px 28px; border-right: 1px solid var(--line); }
 .metric:first-child { padding-left: 0; }
 .metric:last-child { border-right: 0; }
-.metric strong { display: block; font-size: 1.45rem; color: var(--navy); letter-spacing: -.03em; }
+.metric strong { display: block; font-size: clamp(1.2rem, 2vw, 1.45rem); color: var(--navy); letter-spacing: -.03em; }
 .metric span { display: block; color: var(--muted); font-size: .84rem; margin-top: 2px; }
 
 .section-heading { max-width: 650px; margin-bottom: 46px; }
@@ -305,9 +297,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero h1 { font-size: clamp(3rem, 15vw, 4.7rem); }
   .hero-lead { font-size: 1rem; }
   .hero-visual { justify-content: center; }
-  .portrait-frame { width: min(90%, 380px); margin-left: 0; }
-  .portrait-card-top { left: -12px; top: 24px; }
-  .portrait-card-bottom { right: -10px; bottom: 24px; max-width: 230px; }
+  .portrait-frame { width: min(82vw, 360px); margin-left: 0; }
   .metrics { margin-top: 62px; }
   .metric { padding-left: 16px; padding-right: 16px; }
   .metric:first-child { padding-left: 0; }
